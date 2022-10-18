@@ -1,0 +1,9 @@
+{% macro team(name, role, image) %}
+<figure class="p-4">
+  <img class="rounded-full mx-auto" src="/static/images/projects/wpengine-dxp/{{ image }}" />
+  <figcaption class="text-base mt-2">
+    <span class="font-bold">{{ name }}</span><br>
+    <span class="">{{ role }}</span>
+  </figcaption>
+</figure>
+{% endmacro %}

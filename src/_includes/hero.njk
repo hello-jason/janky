@@ -1,0 +1,39 @@
+{# Hero container options #}
+
+{# Home page #}
+{% if page.url == site.nav.home %}
+    <div class="bg-hero-head bg-no-repeat md:min-h-hero-head bg-bottom">
+        {% include "nav.njk" %}
+        <div class="p-12 pt-2 md:p-32 text-center">
+            <h1 class="md:text-9xl lg:text-hero tracking-tighter leading-none text-white uppercase" style="text-shadow: 9px 7px 16px rgba(110 11 179 / 60%);">{{ h1 }}</h1>
+            <p class="text-lg md:text-3xl lg:text-4xl md:font-thin lowercase leading-none text-center text-yellow" style="text-shadow: 3px 2px 4px rgb(110 11 179 / 80%);">{{ subtitle }}</p>
+        </div>
+    </div>
+
+{# Case study #}
+{% elif tags == 'case-study' %}
+  {% if hero == true %}
+    <div class="bg-hero-head bg-no-repeat bg-bottom">
+      {% include "nav.njk" %}
+      <div class="p-8 pt-2 md:p-5 text-center md:text-left">
+          <h1 class="tracking-tight text-2xl md:text-4xl lg:text-6xl leading-none text-white uppercase" style="text-shadow: 9px 7px 16px rgba(110 11 179 / 60%);">{{ title }}</h1>
+      </div>
+    </div>
+  {% else %}
+    {% include "nav.njk" %}
+  {% endif %}
+
+{% else %}
+  {# Default (other pages & single blog articles) #}
+  <div class="bg-hero-head bg-no-repeat bg-bottom">
+      {% include "nav.njk" %}
+      <div class="p-8 pt-2 md:p-5 text-center md:text-left">
+          <h1 class="tracking-tight text-2xl md:text-4xl lg:text-6xl leading-none text-white uppercase" style="text-shadow: 9px 7px 16px rgba(110 11 179 / 60%);">
+              {% if tags == 'blog' %}{{ title }}
+              {% else %}{{ h1 }}
+              {% endif %}
+          </h1>
+      </div>
+  </div>
+
+{% endif %}

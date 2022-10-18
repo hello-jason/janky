@@ -1,0 +1,137 @@
+---
+title: make|SHIFT documentary
+description: A docoumentary about how the advertising industry pioneered the early internet.
+layout: base
+tags: case-study
+nav: inverse
+hero: false
+---
+<div class="cs-section bg-text-black bg-[url('/static/images/projects/makeshift/ms-hero.jpg')] bg-cover bg-center text-white relative after:block after:w-full after:h-full after:absolute after:top-0 after:left-0 after:z-0 after:bg-[rgba(0,0,0,.6)]">
+  <div class="cs-content z-10 relative">
+    <svg class="md:mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="146.272" height="54.382" viewBox="0 0 146.272 54.382"><g transform="translate(0 6.521)"><path d="M46.843,55.279a4.92,4.92,0,0,0-3.9,1.81,4.736,4.736,0,0,0-3.824-1.81,4.15,4.15,0,0,0-3.3,1.565V55.6H32.66V68.392h3.3V60.918a2.422,2.422,0,0,1,2.457-2.549,2.279,2.279,0,0,1,2.386,2.549v7.474h3.3V60.918a2.427,2.427,0,0,1,2.483-2.549,2.294,2.294,0,0,1,2.386,2.549v7.474h3.278V60.918C52.257,57.563,50.269,55.279,46.843,55.279Z" transform="translate(-32.66 -49.916)" fill="#fff"/><path d="M84.441,18.474H79.919l-4.2,4.644V12.79H72.44V31.266h3.283V27.59l1.637-1.713,3.181,5.389h4.17l-5.042-7.8Z" transform="translate(-35.509 -12.79)" fill="#fff"/><path d="M138.822,64.314h-.336a2.967,2.967,0,0,1-2.707,1.489,3.258,3.258,0,0,1-3.207-2.549h6.25V60.592h-6.194a3.278,3.278,0,0,1,3.156-2.432,3.191,3.191,0,0,1,3.059,1.978V55.994a6.551,6.551,0,0,0-3.018-.714,6.7,6.7,0,0,0,0,13.408,7.076,7.076,0,0,0,3.018-.632Z" transform="translate(-79.943 -49.917)" fill="#fff"/><path d="M87.378,59.649c0-1.02-.4-4.369-5.608-4.369-3.35,0-5.684,1.81-6.011,4.247h3.278c.3-1.1,1.642-1.616,2.809-1.616,1.463,0,2.335.546,2.335,1.218,0,1.02-1.529,1.29-3.65,1.489-2.835.25-5.241,1.02-5.241,3.875,0,2.784,2.483,4.15,5.19,4.15A5.2,5.2,0,0,0,84.406,67.2a4.471,4.471,0,0,0,.347,1.193H87.76a7.775,7.775,0,0,1-.382-2.085Zm-3.059,3.778c0,1.637-1.591,2.309-3.569,2.309-1.32,0-2.162-.51-2.162-1.218,0-.943,1.02-1.29,2.605-1.463a7.66,7.66,0,0,0,3.1-.821Z" transform="translate(-53.556 -49.917)" fill="#fff"/></g><g transform="translate(58.879 18.868)"><path d="M184.22,69h5.547V79.2H196.9V69h5.557V95h-5.552V84.065h-7.137V95H184.22Z" transform="translate(-165.831 -68.99)" fill="#ff6c29"/><path d="M228.06,69h5.547V95H228.06Z" transform="translate(-187.32 -68.99)" fill="#ff6c29"/><path d="M290.649,73.838H284.48V69h17.89v4.853H296.2V95h-5.547Z" transform="translate(-214.976 -68.99)" fill="#ff6c29"/><path d="M126.334,47.339H118.88l-1.04-1.04V42.9l1.04-1.04h10.156V37.01H116.107l-.617.617V51.713l.617.617h7.454l1.04,1.04v3.747l-1.04,1.035h-8.07v4.853h10.844l3.813-3.808V51.152Z" transform="translate(-115.49 -37.01)" fill="#ff6c29"/><path d="M219.9,46.53H214.35V67.672H219.9V57.45h9.6V52.6h-9.6Z" transform="translate(-163.949 -41.676)" fill="#ff6c29"/><rect width="10.64" height="4.853" transform="translate(55.953)" fill="#ff6c29"/></g><rect width="2.646" height="54.382" transform="translate(57.559)" fill="#ff6c29"/></svg>
+    <h1 class="text-white">How the <span class="text-[#ff6c29]">advertising industry</span> pioneered the early internet</h1>
+    <p class="font-bold">Website design, SVG animation</p>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Business case</h2>
+    <p>WP&nbsp;Engine has prioritized and cultivated an <a href="https://wpengine.com/agency-partner-program/">Agency Partner Program</a> in an effort to support a massive customer base with exponential revenue growth attached to it.</p>
+    <p>The make|SHIFT documentary caters to that agency audience, tells their story, and celebrates how their contributions shape and respond to consumers in realtime through the internet. Interviews feature the creative minds who helped shift internet advertising from banner ads and popups to interactive experiences like Burger&nbsp;King's <a href="https://en.wikipedia.org/wiki/The_Subservient_Chicken">Subservient Chicken</a> and TD Ameritrade's <a href="https://adage.com/creativity/work/td-ameritrade-first-ad-blockchain/2208286">blockchain ad</a>.</p>
+  </div>
+</div>
+
+<div class="cs-section not-prose bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>The team</h2>
+    {# Create team macro #}
+    {% macro team(name, role, image) %}
+      <figure class="p-4">
+        <img class="rounded-full mx-auto" src="/static/images/projects/{{ image }}" />
+        <figcaption class="text-base mt-2 text-center">
+          <span class="font-bold">{{ name }}</span><br>
+          <span class="">{{ role }}</span>
+        </figcaption>
+      </figure>
+    {% endmacro %}
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+      {# Use team macro #}
+      {{ team("David Fossas", "Sr. Director, Brand", "makeshift/ms-DavidFossas.jpg") }}
+      {{ team("Carley Thompson", "Executive Producer", "makeshift/ms-CarleyThompson.jpg") }}
+      {{ team("Sarah Ricker", "Developer", "makeshift/ms-SarahRicker.jpg") }}
+      {{ team("Jason Cross", "Designer", "wpengine-dxp/dxp-JasonCross.jpg") }}
+    </div>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Ideation and planning</h2>
+    <p>WP Engine partnered with <a href="https://heyletsgo.co/">Hey Let's Go</a> and <a href="http://september.club/">September Club</a> to film and produce the documentary. Execution of the website should follow their editing style, typography, lower thirds, and other visually impactful queues from the film.</p>
+    <p>We identified a clear set of goals for the website:</p>
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]">
+          The site will capture lead information of people who want to view the documentary, since this audience is highly valuable.</span></li>
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]">The documentary video will stream through the website, and access to it must be gated and protected.</span></li>
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]">Users should be able to register and watch the movie as effortlessly as possible.</span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Seamless registration and video access</h2>
+    <p>A primary goal of the documentary site was lead generation. Users would have to provide some contact information via a web form, then we would email them a "magic link" to watch the video.</p>
+    <p>This documentary site was built on WordPress, like most of our other marketing sites. We already had a custom HubSpot integration that accepted our form submissions, so connecting into known workflows was beneficial.</p>
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]">Form submission &rarr; Email &rarr; <strong>Video access</strong></span></li>
+      </ol>
+    </div>
+  </div>
+  <img class="mx-auto" src="/static/images/projects/makeshift/ms-email-template-1200x750.jpg">
+</div>
+
+<div class="cs-section text-white bg-[#000]">
+  <div class="cs-content">
+    <p>Some key components I worked on&hellip;</p>
+  </div>
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Overall look and feel</h2>
+    <p>I was responsible for the design direction and UX of the entire website, working collaboratively with stakeholders and the developer. There were compromises with stakeholder desires for an engaging experience to support the excitement of the film while keeping the interface simple enough for maximum lead generation.</p>
+  </div>
+  <img class="mx-auto" src="/static/images/projects/makeshift/ms-adobexd-artboards-997x887.jpg">
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Intro animation prototype</h2>
+    <p>We wanted to reveal the website after a full screen logo animation. I created a prototype to convey the idea, then provided a <a href="https://codepen.io/hellojason/pen/QWWebqW">Codepen</a> to our developer to fine-tune and implement.</p>
+  </div>
+  <img class="mx-auto" src="/static/images/projects/makeshift/ms-logo-animation.gif">
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Navigation animations</h2>
+    <p>I also prototyped menu hover/focus animations to bring some whimsy and color to the navigation component, which was implemented and honed by our developer.</p>
+  </div>
+  <video class="mx-auto" loop="1" width="610" height="96" playsinline="1" autoplay="1" preload="none" poster="/static/videos/makeshift-nav-animations.png">
+    <source type="video/webm" src="/static/videos/makeshift-nav-animations.webm">
+  </video>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>What I learned</h2>
+    <p>It was energizing to work with external creatives and to play with a new brand that is different from WP&nbsp;Engine's core identity. I was able to explore new layout ideas and typography outside of our typical brand guidelines, and I tinkered with hand-coding SVG animations.</p>
+  </div>
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Awards & accolades</h2>
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number bg-[#b1b1b1]">🏆</span> <span class="text bg-[#d5d5d5]">2020 Platinum Winner Hermes Creative Awards</span></li>
+        <li><span class="number bg-[#b1b1b1]">🏆</span> <span class="text bg-[#d5d5d5]">2020 Excellence Winner Videographer Awards</span></li>
+        <li><span class="number bg-[#b1b1b1]">📺</span> <span class="text bg-[#d5d5d5]">Wide release via streaming services</span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Check it out</h2>
+    <a href="https://makeshift.film/">Website</a>&emsp;
+    <a href="https://wpengine.com/blog/wp-engine-releases-makeshift-documentary-highlighting-creative-technology-in-advertising/">Press release</a>&emsp;
+    <a href="https://www.imdb.com/title/tt12432964/">IMDB</a>
+  </div>
+</div>

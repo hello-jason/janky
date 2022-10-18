@@ -1,0 +1,203 @@
+---
+title: The product demo for WordPress and WP Engine
+description: Marketing website overhaul for WP Engine.
+layout: base
+tags: case-study
+nav: inverse
+hero: false
+---
+
+<div class="cs-section bg-[#002838] bg-[url('/static/images/projects/wpengine-dxp/dxp-hero.jpg')] bg-cover bg-center text-white relative after:block after:w-full after:h-full after:absolute after:top-0 after:left-0 after:z-0 after:bg-[rgba(0,40,56,.5)]">
+  <div class="cs-content z-10 relative">
+    <h1 class="text-white"><span class="bg-[rgba(14,202,212,.7)]">The product demo for WordPress &amp; WP&nbsp;Engine</span></h1>
+    <p class="font-bold"><span class="bg-[rgba(255,255,255,.26)]">Design Lead</span></p>
+    <p class="md:text-xl lg:text-3xl">WP&nbsp;Engine's new website should serve as the product demo for its own platform and for WordPress, showcasing integrations with 3rd party sales and marketing systems, extendability of the framework, robust content analytics, and ease-of-use for the humans who maintain it all.</p>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Business case</h2>
+    <p>WP&nbsp;Engine has positioned itself as the first WordPress Digital Experience Platform (DXP), soon before Gartner released its first <a href="https://martechtoday.com/gartner-releases-first-magic-quadrant-report-digital-experience-platforms-209846">magic quadrant for DXP</a> and inline with announcing a <a href="https://wpengine.com/blog/milestone-announcement/">major fundraising event</a> from Silver Lake. This tilts the company upmarket with an enterprise-focused product offering, and entry-level tiers for <abbr title="small and medium businesses">SMBs</abbr> and agencies to set themselves up for growth and scale.</p>
+    <p>WP&nbsp;Engine is a challenger in the Adobe Experience Manager, Sitecore, and Acquia space, and it's the only one built on an open-source framework with 37% market share of all websites on the internet&mdash;WordPress. Our new website should be the premier case study of the WP&nbsp;Engine platform, punching through dated misconceptions that WordPress is a meek blogging tool. It should demonstrate a cohesive execution of art and science.</p>
+  </div>
+</div>
+
+<div class="cs-section not-prose bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>The team</h2>
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+    {# Create team macro #}
+    {% macro team(name, role, image) %}
+      <figure class="p-4">
+        <img class="rounded-full mx-auto" src="/static/images/projects/wpengine-dxp/{{ image }}" />
+        <figcaption class="text-base mt-2 text-center">
+          <span class="font-bold">{{ name }}</span><br>
+          <span class="">{{ role }}</span>
+        </figcaption>
+      </figure>
+    {% endmacro %}
+
+    {# Use team macro #}
+    {{ team("Mary Ellen Dugan", "Chief Marketing Officer", "dxp-MaryEllenDugan.jpg") }}
+    {{ team("David Vogelpohl", "VP, Web Strategy", "dxp-DavidVogelpohl.jpg") }}
+    {{ team("David Fossas", "Sr. Director, Brand", "dxp-DavidFossas.jpg") }}
+    {{ team("Alan Garcia", "Digital Mktg Mgr", "dxp-AlanGarcia.jpg") }}
+    {{ team("Ryan Hoover", "Developer, Lead", "dxp-RyanHoover.jpg") }}
+    {{ team("Zack Rothauser", "Developer", "dxp-ZackRothauser.jpg") }}
+    {{ team("Christopher Garza", "Developer", "dxp-ChristopherGarza.jpg") }}
+    {{ team("Killian Hagen", "Copywriter", "dxp-KillianHagen.jpg") }}
+    {{ team("Elana Weinberg", "Assoc. Creative Director", "dxp-ElanaWeinberg.jpg") }}
+    {{ team("Jason Cross", "Designer, Lead", "dxp-JasonCross.jpg") }}
+    {{ team("Stacey Lane", "Designer", "dxp-StaceyLane.jpg") }}
+    {{ team("Kat Cox", "Copywriter", "dxp-KatCox.jpg") }}
+    </div>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Ideation and planning</h2>
+    <p>I flew to Salt Lake City with our creative leaders to meet and brainstorm with <a href="https://www.axis41.com/">Axis41</a>, the agency chosen to help blueprint a meaningful site structure and general user experience. This allowed me to have a deep understanding of our direction and vision, and it established our sitemap and visual style. I then lead internal efforts to explore and expand on the concepts, which ultimately produced a robust design component system (discussed later) that we build pages with.</p>
+  </div>
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Integrations with marketing and sales systems</h2>
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number bg-[#B1B1B1]">»</span> <span class="text bg-[#D5D5D5]">A custom form builder plugin connects WordPress forms to <strong>HubSpot</strong> via their API. Automated workflows on HubSpot's side take over and route messages accordingly, such as into <strong>Salesforce</strong> or nurture campaigns.</span></li>
+        <li><span class="number bg-[#B1B1B1]">»</span> <span class="text bg-[#D5D5D5]">We heavily customized how <strong>LiveChat</strong> integrates into the user's sales experience throughout the site.</span></li>
+        <li><span class="number bg-[#B1B1B1]">»</span> <span class="text bg-[#D5D5D5]">Sales phone number, nearest office location, and customer logos are localized depending on where in the world the user is located, leveraging <strong>GeoIP</strong> from WP&nbsp;Engine's platform.</span></li>
+        <li><span class="number bg-[#B1B1B1]">»</span> <span class="text bg-[#D5D5D5]">Deep integration with an external Partner program management tool, <strong>Allbound</strong>, to serve as a recruiting portal for agencies to join as well as surface partners to our customers who are looking for trusted agencies to hire.</span></li>
+        <li><span class="number bg-[#B1B1B1]">»</span> <span class="text bg-[#D5D5D5]">Articles from <a href="https://velocitize.com" rel="nofollow">Velocitize</a> and <a href="https://torquemag.io" rel="nofollow">Torque</a> are pulled in via the WordPress REST API.</span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="cs-section bg-[#0ECAD4] text-white">
+  <div class="cs-content">
+    <p>Some key components I worked on&hellip;</p>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Powder burst graphic and animation</h2>
+    <p>The new website needed a <em>wow factor</em>, something mesmerizing and beautiful. We explored all sorts of ideas, from particle effects in <a href="https://threejs.org/" rel="nofollow">three.js</a> to the playfulness of how <a href="https://max.adobe.com/" rel="nofollow">Adobe Max</a> recreates their logo in dry ice and ink experiments.</p>
+
+    <p>But since time and budget were a factor, I explored an inexpensive piece of software called <a href="https://plotaverse.com/" rel="nofollow">Plotagraph</a>, which lets you give life to still images. Most of the example artwork on their site is painfully overdone, but I was able to apply it to a powder-burst version of the WP&nbsp;Engine logomark that I created to give it some feeling of awe.</p>
+
+    <figure class="not-prose relative group">
+      <img src="/static/images/projects/wpengine-dxp/powder-plotagraph.jpg" />
+      <video class="absolute top-0 left-0 group-hover:opacity-0 transition duration-500" loop="1" playsinline="1" autoplay="1" preload="none" poster="/static/videos/logo-poof.jpg">
+        <source type="video/mp4" src="/static/videos/logo-poof.mp4">
+        <source type="video/webm" src="/static/videos/logo-poof.webm">
+      </video>
+    </figure>
+
+    <p>After launch, the average time of existing customers who visit the home page to log into their account increased a bit, likely meaning that they stopped to gaze at my creation; UX speed bump, but selfishly rewarding.</p>
+  </div>
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Primary navigation</h2>
+    <p>My typical workflow in the past was to design the navigation first, which would inspire the rest of the process. But this project was different; the navigation was one of the last components I worked on.</p>
+    <p>Although we mostly finalized our navigation's structure months earlier, I had to push those wireframes into something that felt complete, something representative of the brand. This proved challenging. It required lots of iterations with top stakeholders.</p>
+
+    <img src="/static/images/projects/wpengine-dxp/nav-exploration.jpg" />
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Sales chat experience</h2>
+    <p>Live chat on any website is often a high-priority lead generation pipeline for that business. I had been heavily involved in <a href="/projects/wpengine-livechat/">sales chat A/B testing</a> on wpengine.com, so I explored how to integrate that channel into the new website experience.</p>
+
+    <p>I built onto past learnings from our testing and made the live chat experience noticeable and engaging. The chat pops into view a few seconds after the page has fully loaded, so you're more likely to notice it, accompanied by a quick bloop sound. We randomize photos of actual WP&nbsp;Engine sales employees, and a red notification bubble indicates you have an unread message.</p>
+
+    <img class="mx-auto" src="/static/images/projects/wpengine-dxp/nav-chat-notification.gif" />
+
+    <p>A variant of this experience can be applied to buttons. Clicking the button will reveal the same employee's face from above, but we build anticipation with an animation mimicking typing, followed by a nice message. Clicking <em>reply</em> triggers a chat with someone in sales, so the experience is natural for potential customers.</p>
+
+    <img class="mx-auto" src="/static/images/projects/wpengine-dxp/specialist-popup.gif" />
+
+    <p>I designed the entire situation to trigger typical human impulses, hopefully in a respectful way, in order to increase engagement. It has been effective.</p>
+  </div>
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Pricing components</h2>
+    <p>These components are often how users convert into customers on the website. They are a big deal. Like with sales chat, I had been heavily involved in previous explorations to increase unassisted signups and <abbr title="average revenue per customer">ARPU</abbr> through these pricing components, so I applied past lessons here to minimize conversion loss.</p>
+
+    <img src="/static/images/projects/wpengine-dxp/component-plans-table.gif" />
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Profile builder form</h2>
+    <p>The profile builder form is the first outward-facing component of our personalization engine. Users who complete the form are rewarded with customized content and messaging throughout the website. I worked with a developer to make it enticing and fun, and we are seeing user engagement. This initial version of the form will be improved over time.</p>
+
+    <img src="/static/images/projects/wpengine-dxp/p13n-form.gif" />
+  </div>
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Component-based design system</h2>
+    <p>We created a series of <em>web components</em> for different types of content, which complement each other when used in various configurations. Our developers integrated this component system into a page builder plugin for WordPress called <a href="https://www.wpbeaverbuilder.com/" rel="nofollow">Beaver Builder</a>. This is the foundation that allows us to quickly build new web pages that are on brand.</p>
+
+    <img src="/static/images/projects/wpengine-dxp/documentation-components.gif" />
+
+    <h3>How new pages are built</h3>
+    <p>New pages often begin with the stakeholder and copywriter hashing out the overall story. The copywriter then fits that story into our design components within a Google Doc. Once done, the copywriter hands over that Google Doc with their content broken down into the design component sections. A designer then builds the page directly in WordPress by dragging in the Beaver Builder components and applying the text as needed. Often no need for developer intervention at all.</p>
+
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number bg-[#B1B1B1]">»</span> <span class="text bg-[#D5D5D5]">Copywriter &rarr; Designer &rarr; Stakeholder approval &rarr; <strong>Published</strong></span></li>
+      </ol>
+    </div>
+
+    <img src="/static/images/projects/wpengine-dxp/documentation-bbdemo.gif" />
+
+    <h3>Improving the process</h3>
+    <p>To improve this process further, I have begun training other teams how to build their own pages. I documented our design system with pictures, step-by-step guides, and pro-tips for finding approved images and so forth. We created custom WordPress user roles so they can log in and see only what they need to see.</p>
+    <p>Other teams are beginning to build their own pages and submit them for review. A designer reviews their page and publishes it for them. This shift in workload results in pages getting out faster, and it allows my team to make the page builder tools more friendly and to create more engaging experiences elsewhere on the site.</p>
+
+    <img src="/static/images/projects/wpengine-dxp/documentation-guide.gif" />
+  </div>
+</div>
+
+<div class="cs-section bg-[#0ECAD4] text-white">
+  <div class="cs-content">
+    <h2 class="text-white">What I learned</h2>
+    <p>I had never collaborated with so many professionals on a project before. The experience was humbling, exciting, and even frustrating at times. I learned to break out of the designer's mindset that cherishes pixels, and instead speak for the user during early phases and throughout the entire production. I found a place at the table that allowed me to oversee and execute the collision of business objectives and user delight.</p>
+
+    <p>I'm happy with the project. And while I cannot detail ongoing marketing efforts for the website, it is of course an ever-evolving thing.</p>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Awards</h2>
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number bg-[#B1B1B1]">🏆</span> <span class="text bg-[#D5D5D5]">2019 dotCOMM Awards, Gold - B2B Website</span></li>
+        <li><span class="number bg-[#B1B1B1]">🏆</span> <span class="text bg-[#D5D5D5]">2018 WebAward - Outstanding Website</span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="cs-section bg-[#f4f7fa]">
+  <div class="cs-content">
+    <h2>Check it out</h2>
+    <a href="https://wpengine.com/">Website</a>&emsp;
+    <a href="https://wpengine.com/wp-engine-case-study/">Official case study</a>
+  </div>
+</div>

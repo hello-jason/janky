@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: Blog
+h1: Hello
+subtitle: I'm Jason, a designer & website optimizer in Austin, TX
+---
+
+<div class="md:flex md:mx-auto md:max-w-6xl">
+    <div class="pb-4 md:pb-0 md:px-5 md:flex-none md:w-1/3 text-center md:text-right">
+        {# Page title #}
+        <h2 class="sticky top-12 uppercase">Recent posts</h2>
+    </div>
+    <div class="md:px-5 md:flex-none md:w-2/3">
+        {% for post in collections.blog | reverse %}
+            <article>
+                <a class="block relative p-5 mb-5 group border border-primary-800/20 hover:border-primary-400 hover:bg-primary-400/5 transition duration-200" href="{{ post.url }}">
+                    {# Post title #}
+                    <h1 class="text-2xl text-primary-400 pb-3 no-underline group-hover:underline underline-offset-2">{{ post.data.title }}</h1>
+
+                    {# Excerpt #}
+                    <p class="pb-3">{{ post.data.description }}</p>
+
+                    {# Timestamps #}
+                    <time class="text-sm" datetime="{{ post.data.date }}" pubdate="pubdate">
+                        {# Published at #}
+                        {% if post.data.date_updated %}<del class="opacity-40">{% endif %}Published {{ post.data.date | formatDate }}{% if post.data.date_updated %}</del>{% endif %}
+                        {# Updated at #}
+                        {% if post.data.date_updated %}&emsp;Updated {{ post.data.date_updated | formatDate }}{% endif %}
+                    </time>
+
+                    {# Arrow icon #}
+                    <svg class="opacity-20 group-hover:opacity-100 absolute right-4 bottom-4 fill-primary-400 w-3.5 h-3.5 transition duration-200" xmlns="http://www.w3.org/2000/svg" width="8.4" height="8.5" viewBox="0 0 8.4 8.5"><title>icon-arrow-downright</title><path d="M2.3,8.5,0,6.1H4.5L0,1.6,1.6,0,6.1,4.5V0L8.4,2.3V8.5Z"></path></svg>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</div>

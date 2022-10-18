@@ -1,0 +1,67 @@
+@import 'utils/_tailwind.css';
+@import 'utils/_accessibility.css';
+
+@layer base {
+  a[href*="//"]:not([href*="hellojason.net"]) {
+    &::after {
+      content: "\00A0(\2348)";
+      @apply no-underline;
+      display: inline-block;
+      color: inherit;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  nav a.active {
+    @apply underline;
+  }
+  abbr[title] {
+    cursor: help;
+  }
+  /* Case study content */
+  .cs-section {
+    /* odd:bg-[#f4f7fa] */
+    @apply p-8 md:p-16 lg:p-20 text-left md:text-center lg:text-2xl;
+    h1 {
+      @apply tracking-tight text-3xl md:text-4xl lg:text-6xl md:leading-none mb-0;
+    }
+    h2 {
+      @apply text-2xl md:text-5xl mb-8;
+    }
+  }
+  .cs-content {
+    @apply mx-auto max-w-4xl;
+    > :first-child {
+      @apply mt-0 pt-0;
+    }
+    > :last-child {
+      @apply mb-0 pb-0;
+    }
+  }
+  .big-list {
+    @apply text-left;
+    li {
+      @apply flex mb-4;
+    }
+    .number, .text {
+      @apply block px-2 py-3 md:px-6 md:py-8;
+    }
+    .number {
+      @apply w-2/12 md:w-1/12 text-center;
+    }
+    .text {
+      @apply w-10/12 md:w-11/12;
+    }
+  }
+}
+
+.prose pre code {
+  @apply text-white;
+}

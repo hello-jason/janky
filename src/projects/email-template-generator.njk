@@ -1,0 +1,108 @@
+---
+title: Email template generator
+description: How a single email request morphed into a robust email template generator.
+layout: base
+tags: case-study
+nav: inverse
+hero: false
+---
+<div class="cs-section bg-[#fbc547] bg-[url('/static/images/projects/email-template-generator/etg-hero.jpg')] bg-cover bg-center">
+  <div class="cs-content">
+    <h1 class="text-white"><span class="bg-[rgba(139,109,39,.6)]">How a single email request morphed into a robust email template generator</span></h1>
+    <p class="font-bold"><span class="bg-[rgba(255,255,255,.26)]">Design, Development</span></p>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Just a newsletter, please</h2>
+    <p> This project originated from a request for a single HubSpot email template&mdash;the monthly newsletter&mdash;as part of WP&nbsp;Engine's initiative to bring more value to customers and partners while also applying updated brand styles. I worked with our creative director and stakeholders from Demand Gen to Customer Experience and designed a fresh newsletter that was on brand and could accomplish the goal.</p>
+    <img src="/static/images/projects/email-template-generator/etg-newsletter-left.gif">
+    <p>Great, but this case study is about the journey afterwards.</p>
+  </div>
+</div>
+
+<div class="cs-section bg-[#fbc547]">
+  <div class="cs-content">
+    <h2>First attempt</h2>
+    <p>I used HubSpot's visual editor for my first attempt at building the template, hoping that non-technical folks in the Marketing department could manipulate it as needed in the future.</p>
+
+    <figure>
+      <img src="/static/images/projects/email-template-generator/etg-hubspot-gui.png">
+      <figcaption>HubSpot's drag &amp; drop visual editor</figcaption>
+    </figure>
+    <p>But the HubSpot editor proved hopeless for 2 reasons:</p>
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number text-white bg-[#8b6d27]">1</span> <span class="text bg-[#d7a93d]">HubSpot's <abbr title='graphical user interface'>GUI</abbr> builder was simply unable to accommodate parts of the design&mdash;I had to switch to hand-coding mode, which made it inaccessible to non-technical folks.</span></li>
+        <li><span class="number text-white bg-[#8b6d27]">2</span> <span class="text bg-[#d7a93d]">HubSpot's GUI builder generated a bloated mess of an email. Code dignity aside, certain email clients truncated the email because of its file size, hiding content behind a tiny "show entire email" text link at the bottom.</span></li>
+      </ol>
+    </div>
+    <p>The newsletters went out on time, but click-through rates tanked. I knew that I would have to rethink the project's execution. But this newsletter goes out every month, and I can't be the bottleneck.</p>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Second attempt</h2>
+    <p>Email requests for other departments also came in during this time. Hand-coding emails is torturous, so I decided that my next attempt could be more elegant and reusable; I dug deeper into the needs of all these requests and discovered they all were an effort to support the company’s north star goal of increasing brand awareness through visual consistency.</p>
+    <p>The shared goal of all these requests surfaced a larger, company-wide problem, and I could solve a greater need&mdash;consistent and manageable email templates, company-wide, from a single codebase. But I can't be the bottleneck&hellip;</p>
+    <h3>Time for research</h3>
+    <p>I considered immediate and long-term needs:</p>
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]"><strong>Time is important.</strong><br>The most crucial point: our newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template, regardless of how I chose to do that.</span></li>
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]"><strong>Consistency is important.</strong><br>Emails will be visually similar, so they should share base layout components and stylesheets.</span></li>
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]"><strong>Speed is important.</strong><br>New templates will be created regularly, as we build out our library of email templates. I should not be the only person capable of cranking out new ones.</span></li>
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]"><strong>Juggling is important.</strong><br>Multiple templates will probably be developed simultaneously, and email programs are not known for their version control.</span></li>
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]"><strong>Agility is important.</strong><br>We will be completely overhauling our main website over the coming months, meaning all these email templates will be updated again to match the new design direction.</span></li>
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]"><strong>Enablement is important.</strong><br>Non-technical folks should eventually be able to update content themselves, such as for the monthly newsletter.</span></li>
+        <li><span class="number bg-[#b1b1b1]">»</span> <span class="text bg-[#d5d5d5]"><strong>Simplicity and documentation is important.</strong><br>My solution should be approachable by other developers for contributions and maintenance.</span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="cs-section bg-[#fbc547]">
+  <div class="cs-content">
+    <h2>Building the thing</h2>
+    <p>I used <a href="https://github.com/hello-jason/magento-transactional-email-generator">a project from my past</a> as an established starting point for this endeavor. I knew that project well, and I knew it could be expanded to meet our requirements. So, I felt it would let me deliver the time-sensitive newsletter template quickly and also be a suitable foundation to satisfy our future needs.</p>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>Project component breakdown</h2>
+    <h3>Core</h3>
+    <p>My project combines <a href="https://middlemanapp.com/">Middleman</a>, a static website framework, with <a href="http://premailer.dialect.ca/">Premailer</a>, a package that modifies HTML files to be email-friendly. The result is a modern web stack that developers can learn quickly and a build process that generates self-contained, email-friendly HTML files to be placed into any email platform.</p>
+
+    <h3>HubSpot helpers</h3>
+    <p>I developed a series of helper methods for HubSpot integration. They spit out placeholder HTML when viewing locally, but that is replaced with HubSpot <a href="http://designers.hubspot.com/docs/hubl/hubl-module-syntax-and-parameters">HUBL snippets</a> when building for production. HubSpot recognizes these snippets and replaces them with meaningful content, such as the current month or an editable rich text area.</p>
+
+    <h3>Documentation</h3>
+    <p>I documented the crap out of this project, specifically the monthly newsletters, with step-by-step instructions and screenshots.</p>
+  </div>
+  <img src="/static/images/projects/email-template-generator/etg-newtemplate-create.png">
+</div>
+
+<div class="cs-section bg-[#fbc547]">
+  <div class="cs-content">
+    <h2>If it ain't broke, make it better</h2>
+    <p>The newsletter process worked great for a few months, so I devoted time with each newsletter to improve the project.</p>
+    <div class="not-prose">
+      <ol class="big-list">
+        <li><span class="number text-white bg-[#8b6d27]">»</span> <span class="text bg-[#d7a93d]">A flag could be set to let the build process know which email program each template was for, such as HubSpot, Gainsight, or Netsuite. This would show or hide template parts that were specific to each platform.</span></li>
+        <li><span class="number text-white bg-[#8b6d27]">»</span> <span class="text bg-[#d7a93d]">Data was decoupled from the view template and moved to individual JSON files. This made copying/pasting content from Google Docs much easier and established a schema to build a UI onto for copywriters to enter content.</span></li>
+        <li><span class="number text-white bg-[#8b6d27]">»</span> <span class="text bg-[#d7a93d]">Smarter templates that automatically find the matching view and content for each month.</span></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="cs-section">
+  <div class="cs-content">
+    <h2>The future</h2>
+    <p>The newsletter workflow is quite efficient, but it still must go through a developer each month. And meticulously iterating over content changes is&hellip;tedious. The next step for me is to explore something like <a href="http://www.alpacajs.org/">Alpaca Forms</a>, which generates a web form based on a JSON schema. This could allow the content team to tweak the copy themselves and simply give my team a JSON blob to run through the generator.</p>
+    <p>The obvious step after that is to add the build process directly into that web form, so they can edit, build, and paste the email templates directly into HubSpot 100% on their own. One day&hellip;</p>
+  </div>
+</div>

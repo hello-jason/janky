@@ -1,0 +1,74 @@
+---
+title: Projects
+h1: Projects
+description: Past work and case studies
+layout: base.njk
+---
+
+{# Manage these projects in _data/projectList.json #}
+
+{# Case Studies #}
+<div class="pb-12 md:flex md:mx-auto md:max-w-6xl">
+    <div class="pb-4 md:pb-0 md:px-5 md:flex-none md:w-1/3 text-center md:text-right">
+        <h2 class="sticky top-12 uppercase">Case studies</h2>
+    </div>
+    <div class="md:px-5 md:flex-none md:w-2/3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for project in projectList.caseStudy %}
+            <figure class="mx-auto">
+                <a class="block relative group" href="{{ project.slug }}">
+                    <figcaption class="absolute w-full h-full px-5 pt-14 text-center text-white bg-primary-400/80 transition duration-200 opacity-0 group-hover:opacity-100">
+                        <strong class="text-2xl">{{ project.name }}</strong><br>
+                        <span class="text-sm text-yellow">view case study</span>
+                    </figcaption>
+                    <img src="/static/images/projects/thumbnails/{{ project.image }}" />
+                </a>
+            </figure>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{# WP Engine projects #}
+<div class="pb-12 md:flex md:mx-auto md:max-w-6xl">
+    <div class="pb-4 md:pb-0 md:px-5 md:flex-none md:w-1/3 text-center md:text-right">
+        <h2 class="sticky top-12 uppercase">WP Engine</h2>
+    </div>
+    <div class="md:px-5 md:flex-none md:w-2/3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for project in projectList.wpEngine %}
+            <figure class="mx-auto">
+                <a class="block relative group" href="{{ project.slug }}">
+                    <figcaption class="absolute w-full h-full px-5 pt-14 text-center text-white bg-primary-400/80 transition duration-200 opacity-0 group-hover:opacity-100">
+                        <strong class="text-2xl">{{ project.name }}</strong><br>
+                        <span class="text-sm text-yellow">view project</span>
+                    </figcaption>
+                    <img src="/static/images/projects/thumbnails/{{ project.image }}" />
+                </a>
+            </figure>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{# Website projects from before #}
+<div class="pb-12 md:flex md:mx-auto md:max-w-6xl">
+    <div class="pb-4 md:pb-0 md:px-5 md:flex-none md:w-1/3 text-center md:text-right">
+        <h2 class="sticky top-12 uppercase">Websites</h2>
+    </div>
+    <div class="md:px-5 md:flex-none md:w-2/3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for project in projectList.websites %}
+            <figure class="mx-auto">
+                <a class="block relative group" href="{{ project.slug }}">
+                    <figcaption class="absolute w-full h-full px-5 pt-14 text-center text-white bg-primary-400/80 transition duration-200 opacity-0 group-hover:opacity-100">
+                        <strong class="text-2xl">{{ project.name }}</strong><br>
+                        <span class="text-sm text-yellow">view project</span>
+                    </figcaption>
+                    <img src="/static/images/projects/thumbnails/{{ project.image }}" />
+                </a>
+            </figure>
+            {% endfor %}
+        </div>
+    </div>
+</div>
