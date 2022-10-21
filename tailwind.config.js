@@ -5,7 +5,7 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			'sans': ['Montserrat', 'Segoe UI', 'SegoeUI', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+			'sans': ['Impact', 'Montserrat', 'Segoe UI', 'SegoeUI', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
 		},
 		colors: {
 			// Tint generator: https://tailwind-color-palette.netlify.app/
@@ -23,18 +23,11 @@ module.exports = {
 			'secondary': '#FAAC2C',
 			'yellow'   : '#FFFF93',
 			'white'    : '#FFFFFF',
-			'black'    : '#2F3021'
+			'black'    : '#000000'
 		},
 		extend: {
 			backgroundImage: {
-				'hero-head': "url('/static/images/JC-HERO-PurpleFace-v02.jpeg')",
-				'hero-feet': "url('/static/images/JC-HERO-PurpleFeet-v02.jpeg')",
-			},
-			minHeight: {
-				'hero-head': '720px',
-			},
-			fontSize: {
-				'hero': '14em',
+				'hero': "url('/static/images/small-red-neon.jpg')",
 			},
 			// Customize the @tailwindcss/typography plugin
 			typography: {

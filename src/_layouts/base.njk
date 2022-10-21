@@ -32,46 +32,17 @@
         {% else %}
             <link rel="stylesheet" href="/static/styles.min.css">
         {% endif %}
-
-        <!-- Try and serve Google Fonts in the most efficent way possible -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
     </head>
-    <body class="bg-primary-400 text-black selection:bg-secondary selection:text-white page-{{ title | lower | replace(" ", "-") }} layout-{{ layout }}">
-        
-        {# Google Tag Manager (noscript) #}
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFL2NCD"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+    <body class="text-black selection:bg-secondary selection:text-white page-{{ title | lower | replace(" ", "-") }} layout-{{ layout }}">
 
         <a href="#main" class="skip-link">Skip to main content</a>
 
         {# Hero #}
-        {% include "hero.njk" %}
+        {# {% include "hero.njk" %} #}
         
         {# Main container options #}
-        {% if tags == 'blog' %}
-            {# Blog template #}
-            <main id="main" class="bg-white p-4 pt-8 md:p-10">
-                {% include "blog.njk" %}
-            </main>
-        {% elif tags == 'case-study' %}
-            {# Case study template #}
-            <main id="main" class="bg-white prose">
-                {{ content | safe }}
-                <div class="border-t border-primary-800/20 p-5 mt-5">
-                    ↩ <a href="{{ site.nav.projects }}">All projects</a>
-                </div>
-            </main>
-        {% else %}
-            {# Default template #}
-            <main id="main" class="bg-white p-4 pt-8 md:p-10">
-                {{ content | safe }}
-            </main>
-        {% endif %}
-        <footer class="bg-hero-feet bg-center bg-no-repeat h-48"></footer>
+        <main id="main" class="bg-hero bg-black bg-cover bg-right w-full h-screen">
+            {{ content | safe }}
+        </main>
     </body>
-    {# <script src="/static/app.min.js" defer></script> #}
 </html>

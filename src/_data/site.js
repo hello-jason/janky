@@ -1,7 +1,7 @@
 module.exports = {
-	"title": "Hello Jason",
-	"description": "Portfolio of Jason Cross",
-	"url": "https://hellojason.net/",
+	"title": "Janky",
+	"description": "Janky",
+	"url": "https://janky.life/",
 	"author": "Jason Cross",
 	"meta_data": {
 		// "twitter": "@chrissy_dev",
