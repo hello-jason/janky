@@ -5,7 +5,7 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			'sans': ['Impact', 'Montserrat', 'Segoe UI', 'SegoeUI', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+			'sans': ['Permanent Marker', 'Segoe UI', 'SegoeUI', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
 		},
 		colors: {
 			// Tint generator: https://tailwind-color-palette.netlify.app/
@@ -45,6 +45,26 @@ module.exports = {
           },
         },
 			},
+			keyframes: {
+				wave: {
+          '0%': { transform: 'rotate(0.0deg)' },
+          '10%': { transform: 'rotate(14deg)' },
+          '20%': { transform: 'rotate(-8deg)' },
+          '30%': { transform: 'rotate(14deg)' },
+          '40%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(10.0deg)' },
+          '60%': { transform: 'rotate(0.0deg)' },
+          '100%': { transform: 'rotate(0.0deg)' },
+        },
+				pulsate: {
+          '0%': { textShadow: '0 0 4px rgba(255,255,255,0.4), 0 0 11px rgba(255,255,255,0.4), 0 0 19px rgba(255,255,255,0.4), 0 0 40px #fb0000, 0 0 80px #fb0000, 0 0 90px #fb0000, 0 0 100px #fb0000, 0 0 150px #fb0000' },
+          '100%': { textShadow: '0 0 4px rgba(255,255,255,0.4), 0 0 10px rgba(255,255,255,0.4), 0 0 18px rgba(255,255,255,0.4), 0 0 38px #fb0000, 0 0 73px #fb0000, 0 0 80px #fb0000, 0 0 94px #fb0000, 0 0 140px #fb0000' },
+        },
+			},
+			animation: {
+        'waving-hand': 'wave 2s linear infinite',
+				'glow': 'pulsate 0.11s ease-in-out infinite alternate',
+      },
 		},
 	},
 	plugins: [

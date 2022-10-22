@@ -32,6 +32,12 @@
         {% else %}
             <link rel="stylesheet" href="/static/styles.min.css">
         {% endif %}
+
+         <!-- Try and serve Google Fonts in the most efficent way possible -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
     </head>
     <body class="text-black selection:bg-secondary selection:text-white page-{{ title | lower | replace(" ", "-") }} layout-{{ layout }}">
 
