@@ -23,7 +23,8 @@ module.exports = {
 			'secondary': '#FAAC2C',
 			'yellow'   : '#FFFF93',
 			'white'    : '#FFFFFF',
-			'black'    : '#000000'
+			'black'    : '#000000',
+			'red'      : '#FB0000',
 		},
 		extend: {
 			backgroundImage: {
