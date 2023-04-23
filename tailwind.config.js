@@ -5,7 +5,8 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			'sans': ['Permanent Marker', 'Segoe UI', 'SegoeUI', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+			'display': ['Chivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+			'body': ['Arimo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 		},
 		colors: {
 			// Tint generator: https://tailwind-color-palette.netlify.app/

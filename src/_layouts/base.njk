@@ -36,18 +36,21 @@
          <!-- Try and serve Google Fonts in the most efficent way possible -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Vibur&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Chivo&family=Arimo&family=Permanent+Marker&display=swap" rel="stylesheet">
 
     </head>
     <body class="text-black selection:bg-secondary selection:text-white page-{{ title | lower | replace(" ", "-") }} layout-{{ layout }}">
 
         <a href="#main" class="skip-link">Skip to main content</a>
 
+        {# Primary navigation #}
+        {% include "nav.njk" %}
+
         {# Hero #}
-        {# {% include "hero.njk" %} #}
+        {% include "hero.njk" %}
         
         {# Main container options #}
-        <main id="main" class="bg-hero bg-black bg-cover bg-right w-full h-screen">
+        <main id="main" class="p-20">
             {{ content | safe }}
         </main>
     </body>
